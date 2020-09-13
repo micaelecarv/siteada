@@ -1,6 +1,10 @@
-if(document.getElementById("nome") estiver preenchido && document.getElementById("email") estiver preenchido){
-  envie os dados
-}else{
-  peça a usuária que preencha os campos nome e email
-}
+document.getElementById("botaoEnviar").addEventListener("click", validaFormulario)
 
+function validaFormulario (){
+  if(document.getElementById("nome").value != "" &&            document.getElementById("email").value !="" &&
+    document.getElementById("telefone").value != "" ){
+      alert("Prontinho! Você receberá as novidades por email.")
+  }else{
+      alert("Por favor, preencha os campos nome e email!")
+  }
+}
